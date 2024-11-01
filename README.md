@@ -1,2 +1,2 @@
-# flatten_json
-flattens a json file and exports to excel
+# JSON to Excel
+This app flattens a json file and exports to excel
