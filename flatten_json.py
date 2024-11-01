@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
+from io import BytesIO
 
 # Function to flatten a JSON object
 def flatten_json(nested_json, delimiter):
@@ -43,7 +44,9 @@ if st.button("Convert to Excel"):
         df = pd.DataFrame(list(flat.items()), columns=['Key', 'Value'])
 
         # Convert DataFrame to Excel
-        output = df.to_excel(index=False)
+        output = BytesIO()
+        df.to_excel(output, index=False)
+        output.seek(0)
 
         # Provide download link for the Excel file
         st.download_button(
