@@ -3,6 +3,17 @@ import pandas as pd
 import json
 from io import BytesIO
 
+# Display the contents of the README.md file
+def display_readme():
+    try:
+        with open("README.md", "r") as f:
+            readme_content = f.read()
+        st.markdown(readme_content)
+    except FileNotFoundError:
+        st.error("README.md file not found.")
+
+display_readme()
+
 # Function to preprocess JSON keys
 def preprocess_keys(obj, delimiter, replacement):
     if isinstance(obj, dict):
