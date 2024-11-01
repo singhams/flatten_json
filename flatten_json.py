@@ -60,6 +60,9 @@ if st.button("Convert to Excel"):
         # Convert the flattened JSON object into a DataFrame
         df = pd.DataFrame(list(flat.items()), columns=['Key', 'Value'])
 
+        # Add a new column with the last segment of the key
+        df['Last Segment'] = df['Key'].apply(lambda x: x.split(delimiter)[-1])
+
         # Convert DataFrame to Excel
         output = BytesIO()
         with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
