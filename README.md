@@ -38,4 +38,4 @@ it would be flattened into something like this:
   "phones_1_number": "987-654-3210",
   "email": "john.doe@example.com"
 }
-`
+```
