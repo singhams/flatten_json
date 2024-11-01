@@ -45,7 +45,7 @@ def flatten_json(nested_json, delimiter):
     return out
 
 # Streamlit app
-st.title("JSON to Excel Converter")
+st.title("Convert a File")
 
 # File uploader for JSON input
 uploaded_file = st.file_uploader("Choose a JSON file", type="json")
