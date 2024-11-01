@@ -2,3 +2,4 @@ streamlit
 pandas
 json
 io
+openpyxl
