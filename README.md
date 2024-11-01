@@ -1,6 +1,5 @@
 # JSON to Excel
 
-### About
 This app flattens a json file and exports to Excel
 
 For example, if you were to start with a nested JSON object like this:
